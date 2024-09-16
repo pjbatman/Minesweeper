@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="minesweeper.css">
+        <script src="minesweeper.js"></script>
+    </head>
+
+    <body>
+        <!-- Minesweeper title image on top of webpage -->
+        <img src="minesweeper_title.png" alt="Minesweeper">
+
+        <!-- Keeps track of current mines based on level difficulty -->
+        <h1 id="mines-title">Mines: <span id="mines-count">0</span></h1>
+        
+        <!-- Contains all difficulty buttons and heading-->
+        <div id="difficulty">
+            <h1>Choose your difficulty:</h1>
+            <div class="difficulty-buttons">
+                <button onclick="setGamemode('e')" id="easy-mode">Easy</button>
+                <button onclick="setGamemode('m')" id="intermediate-mode">Intermediate</button>
+                <button onclick="setGamemode('h')" id="hard-mode">Hard</button>
+            </div>
+        </div>
+
+        <!-- Gameover text and play button(gets toggled at end of game) -->
+        <h1 id="gameover-text">Gameover</h1>
+        <button id="play-again" onclick="location.reload()">Play Again?</button>
+
+        <!-- Physical board to play game on-->
+        <div id="board"></div>
+        
+        <!-- Line break to seperate flag button from board -->
+        <br>
+        <button id="flag-button">🚩</button>
+    </body>
+</html>
